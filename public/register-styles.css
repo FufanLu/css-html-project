@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Times New Roman";
+    
+    line-height: 1.6;
+}
+
+header {
+    padding: auto;
+    
+    background-image: url("./images/header-background.png");
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+h1 {
+    padding: 10px;
+
+    color: black;
+    background-color: rgba(191, 188, 188, 0.3);
+}
+
+.logo-link {
+    flex: 0 0 120px;
+
+    margin-top: 10px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.main-nav {
+    flex: 1;
+
+    margin-left: 10rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+
+    list-style: none;
+}
+
+.menu-category {
+    position: relative;
+}
+
+.menu-category>button {
+    padding: 0.5rem 1rem;
+
+    font-size: 1.1rem;
+
+    background: none;
+    border: none;
+    color: white;
+}
+
+.menu-category-content {
+    display: block;
+    position: absolute;
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+
+    list-style: none;
+    
+    background: white;
+}
+
+.menu-category:hover .menu-category-content {
+    opacity: 1;
+    visibility: visible;
+    
+    transition: opacity 0.5s ease, visibility 0s linear 0s;
+}
+
+.menu-category-content a {
+    display: block;
+    padding: 0.75rem 1rem;
+
+    text-decoration: none;
+    
+    transition: background-color 0.2s ease;
+}
+
+.menu-category-content a:hover {
+    background-color: #f0f0f0;
+}
+
+main {
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 30px;
+    
+    background-image: url("./images/main-background.png");
+}
+
+h2 {
+    text-align: center;
+    
+    margin-bottom: 10px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    margin: 0 auto;
+
+    font-size: 1.1rem;
+    
+    line-height: 1.6;
+}
+
+main>div {
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 1rem;
+
+    border-radius: 0.5rem;
+    
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: rgb(230, 228, 228);
+}
+
+.required-hint {
+    margin: 0 0 -1rem 0;
+
+    font-size: 0.9em;
+
+    color: #666;
+}
+
+.register-button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+
+    font-size: 1rem;
+
+    color: white;
+    background-color: #007bff;
+}
+
+.register-form span {
+    display: inline-block;
+    
+    width: 100%;
+}
+
+.get-updates {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.get-updates span {
+    width: auto;
+}
+
+.get-updates input {
+    margin-right: 10px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    width: 100%;
+}
+
+.form-content input,
+.form-content select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.form-content span {
+    text-align: left;
+    
+    line-height: 1.5;
+}
+
+.get-updates span {
+    line-height: 1.5;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    border-color: skyblue;
+    background-color: #f0faff;
+    
+    box-shadow: 0 0 8px rgba(135, 206, 250, 0.8);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+
+    height: 3rem;
+    
+    background-color: black;
+}
+
+footer a {
+    grid-column: span 4;
+
+    font-size: 1.2rem;
+
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: skyblue;
+}
+
+@media (max-width: 50rem) {
+    .header-content {
+        flex-direction: row;
+    }
+
+    .logo-link {
+        width: 50%;
+    }
+
+    h1 {
+        width: 50%;
+
+        font-size: 1.5rem;
+    }
+
+    .main-nav {
+        margin-left: 0;
+        
+        justify-items: center;
+    }
+
+    .main-nav button {
+        font-size: 1rem;
+
+        color: black;
+        background-color: rgba(191, 188, 188, 0.5);
+    }
+
+    main>div {
+        max-width: 100%;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: center;
+
+        height: auto;
+        
+        background-color: rgb(35, 35, 35);
+    }
+
+    footer a {
+        grid-column: span 12;
+        margin: 10px 0;
+
+        font-size: 1.2rem;
+
+        color: white;
+    }
+}
