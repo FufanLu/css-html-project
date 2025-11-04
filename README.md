@@ -1,4 +1,4 @@
-# Project 1: Multi-page Website
+# Multi-page Website
 
 **Due Mon Feb 10, 11:59pm PT**
 
